@@ -1,0 +1,26 @@
+{
+  "name": "Blackboard modules offline",
+  "description": "Download Blackboard modules for offline use. This extension downloads all the pages of a module and renders them to a single tab in Chrome. This can be used to read the module without having to click next (offline) or to print the entire module.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "tabs", "scripting"],
+  "host_permissions": [
+    "https://*.ally.ac/",
+    "https://*.amazonaws.com/",
+    "https://*.instructure.com/"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-32.png",
+    "64": "icon-64.png",
+    "128": "icon-128.png"
+  }
+}
